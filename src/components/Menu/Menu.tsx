@@ -1,13 +1,26 @@
+import { List, ListItem } from 'delta_kit';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { MenuLink } from 'typings/common';
 
 const links: MenuLink[] = [
-    { link: '/', name: 'Главная' },
-    { link: '/triggers', name: 'Триггеры' },
-    { link: '/update', name: 'Обновления' },
+    { link: '/', name: 'Overview', icon: 'list-bulleted' },
+    { link: '/triggers', name: 'Devices' },
+    { link: '/analytics', name: 'Analytics' },
+    { link: '/rules', name: 'Rules' },
+    { link: '/gallery', name: 'Gallery' },
+    { link: '/history', name: 'History' },
+    { link: '/settings', name: 'Settings', icon: 'settings' },
+
+    
 ];
 
 export function Menu() {
-    return links.map(({ link, name }) => <Link to={link}>{name}</Link>);
+    return (
+        <List>
+            {links.map(({ link, name }) => (
+                <ListItem to={link}>{name}</ListItem>
+            ))}
+        </List>
+    );
 }

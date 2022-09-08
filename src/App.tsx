@@ -1,11 +1,17 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
+import { Menu } from './components/Menu/Menu';
+import { Header } from './components/Header/Header';
+import styles from './App.module.scss'
 
 function App() {
     return (
-        <BrowserRouter>
-            <header className="App-header">See it</header>
-        </BrowserRouter>
+        <div className={styles.root}>
+            <BrowserRouter>
+                <Header />
+                <Menu />
+            </BrowserRouter>
+        </div>
     );
 }
 
