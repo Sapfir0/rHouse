@@ -12,9 +12,11 @@ function App() {
                 <Header />
                 <div className={styles.mainLayout}>
                     <Menu />
-                    <Routes>
-                        <Route path='/' element={<Overview />}/>
-                    </Routes>
+                    <div className={styles.page}>
+                        <Routes>
+                            <Route path='/' element={<Overview />}/>
+                        </Routes>
+                    </div>
                 </div>
  
             </BrowserRouter>

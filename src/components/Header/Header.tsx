@@ -7,7 +7,7 @@ export function Header() {
     return <div className={styles.root}>
         <div>
         <>Logotip</>
-        <Button icon={'list-bulleted'} />
+        <Button className={styles.list} icon={'list-bulleted'} />
         </div>
         <AvailableMemoryProgress />
         <div>

@@ -1,7 +1,19 @@
+@import "./vars.scss";
+
 .root {
-    background-color: rgba(25,42,65,255);
+    background-color: $bg-color;
+    color: $grey-color;
 }
 
 .mainLayout {
     display: flex;
+}
+
+.page {
+    margin-top: 15px;
+}
+
+
+body {
+    margin: 0;
 }

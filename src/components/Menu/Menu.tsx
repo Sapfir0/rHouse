@@ -18,7 +18,7 @@ export function Menu() {
     return (
         <List className={styles.root}>
             {links.map(({ link, name, icon }) => (
-                <ListItem key={link} icon={icon} to={link}>{name}</ListItem>
+                <ListItem className={styles.listItem} key={link} icon={icon} to={link}>{name}</ListItem>
             ))}
         </List>
     );

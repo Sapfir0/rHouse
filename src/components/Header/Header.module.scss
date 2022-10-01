@@ -1,4 +1,16 @@
+@import '../../vars.scss';
+
 .root {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px $accent-color solid;
+    padding-bottom: 5px;
+}
+
+.list {
+    border-right: 1px $accent-color solid;
+    border-left: 1px $accent-color solid;
+    border-radius: 0;
+    padding: 5px;
 }
