@@ -14,11 +14,11 @@ const links: MenuLink[] = [
     { name: 'Settings', link: '/settings', icon: 'settings' },
 ];
 
-export function Menu() {
+export function Menu() {    
     return (
         <List className={styles.root}>
             {links.map(({ link, name, icon }) => (
-                <ListItem className={styles.listItem} key={link} icon={icon} to={link}>{name}</ListItem>
+                <ListItem className={styles.listItem} key={link} selected={ window.location.pathname === link} icon={icon} to={link}>{name}</ListItem>
             ))}
         </List>
     );

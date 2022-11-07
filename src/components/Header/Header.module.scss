@@ -6,6 +6,7 @@
     align-items: center;
     border-bottom: 1px $accent-color solid;
     padding-bottom: 5px;
+    padding-top: 5px;
 }
 
 .list {
@@ -13,4 +14,8 @@
     border-left: 1px $accent-color solid;
     border-radius: 0;
     padding: 5px;
+}
+
+.logo {
+    margin-left: 10px;
 }

@@ -5,10 +5,8 @@ import { AvailableMemoryProgress } from '../AvailableMemoryProgress/AvailableMem
 
 export function Header() {
     return <div className={styles.root}>
-        <div>
-        <>Logotip</>
+        <div className={styles.logo}>RHouse</div>
         <Button className={styles.list} icon={'list-bulleted'} />
-        </div>
         <AvailableMemoryProgress />
         <div>
         <Button icon={'help'} />
