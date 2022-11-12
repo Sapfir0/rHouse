@@ -1,6 +1,5 @@
-import { List, ListItem } from 'delta_kit';
+import { List, ListItem } from '@sapfir0/delta_kit';
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { MenuLink } from 'typings/common';
 import styles from './Menu.module.scss';
 

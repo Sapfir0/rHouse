@@ -1,4 +1,4 @@
-import { IconName } from "delta_kit/dist/typings/iconNames";
+import { IconName } from "@sapfir0/delta_kit/dist/typings/iconNames";
 import { routes } from "../services/common";
 
 

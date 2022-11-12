@@ -1,4 +1,4 @@
-import { Card, Statement } from 'delta_kit'
+import { Card, Statement } from '@sapfir0/delta_kit'
 import React from 'react'
 import styles from './Overview.module.scss'
 
