@@ -74,20 +74,25 @@ const barProps = {
 export function Overview() {
     return <><h1>Overview</h1>
     <div className={styles.root}>
-    <Card header='Camera'> <img className={styles.cameraImage} src="/src/images/home.png" /> </Card>
+    <Card header='Camera'> 
+    <>
+        <img className={styles.cameraImage} src="/src/images/home.png" /> 
+    </>
+    </Card>
 
     <Card header='Consumtion by room'>
             <Chart options={chartProps.options} series={chartProps.series} type="donut" width="380" />
-        </Card>
+    </Card>
 
-        <Card header='Consumtion by day'>
-            <Chart options={barProps.options} series={barProps.series} type="bar" width="250" />
-        </Card>
+    <Card header='Consumtion by day'>
+        <Chart options={barProps.options} series={barProps.series} type="bar" width="250" />
+    </Card>
 
-    <Card header='Status by units' ><Statement value={22} dimension='мм' size='large' isIncreasing={false} /></Card>
+    <Card header='Device limit'>
+            <Chart options={simpleChartProps.options} series={simpleChartProps.series} type="donut" width="250" />
+    </Card>
 
-
-    <Card header='Inside'><div className={styles.longCard}>
+    <Card header='Status by units'><div className={styles.longCard}>
             <Statement value={745} dimension='W' size='large' title='On livingroom' isIncreasing={false}  />
             <Statement value={20} dimension='F' size='large' title='Outside' isIncreasing={false} />
             <Statement value={15} dimension='F' size='large' title='Inside' isIncreasing={false} />
@@ -101,9 +106,7 @@ export function Overview() {
 
 
 
-        <Card header='Device limit'>
-            <Chart options={simpleChartProps.options} series={simpleChartProps.series} type="donut" width="380" />
-        </Card>
+
         </div>
     </>
 }
