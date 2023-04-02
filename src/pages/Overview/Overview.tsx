@@ -7,6 +7,9 @@ const chartProps =  {
         dataLabels: {
             enabled: false,
         },
+        stroke: {
+            width: 0
+        },
         labels: ['Living Room', 'Studio', 'Bedroom', 'Garage', 'Kitchen'],
         legend: {
             fontSize: '14px',
@@ -26,21 +29,36 @@ const chartProps =  {
             }
         }
     },
-    series: [44, 55, 41, 17, 15],
+    series: [16, 22, 11, 39, 12],
 }
 
-const simpleChartProps =  {
-    options: {
-        dataLabels: {
-            enabled: false,
-        },
-        legend: {
-            show: false,
-        }
+const simpleChartProps = {
+    dataLabels: {
+        enabled: false,
     },
-    series: [80, 20,],
-    labels: ['A', 'B',]
-}
+    series: [67],
+    options: {
+      plotOptions: {
+        radialBar: {
+          dataLabels: {
+            name: {
+              show: false
+            },
+            value: {
+              fontSize: '30px',
+              color: 'white',
+              formatter: function (val: any) {
+                return val;
+              }
+            }
+          }
+        }
+      },
+      labels: ['Median Ratio'],
+    },
+  
+  
+  };
 
 
 const barProps = {
@@ -89,14 +107,14 @@ export function Overview() {
     </Card>
 
     <Card header='Device limit'>
-            <Chart options={simpleChartProps.options} series={simpleChartProps.series} type="donut" width="250" />
+            <Chart options={simpleChartProps.options} series={simpleChartProps.series} type="radialBar" height="250" />
     </Card>
 
     <Card header='Status by units'><div className={styles.longCard}>
             <Statement value={745} dimension='W' size='large' title='On livingroom' isIncreasing={false}  />
             <Statement value={20} dimension='F' size='large' title='Outside' isIncreasing={false} />
             <Statement value={15} dimension='F' size='large' title='Inside' isIncreasing={false} />
-            <Statement value={494} dimension='CF' size='large' title='Water' isIncreasing={false} />
+            <Statement value={494} dimension='CF' size='large' title='Water' isIncreasing={true} />
             <Statement value={45.3} dimension='MB' size='large' title='Water' isIncreasing={false} />
 
         </div>
